@@ -1,0 +1,103 @@
+body{
+    background-color: rgb(44, 42, 42);
+}
+header{
+    position: sticky;
+    top: 20px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0 4px;
+}
+.image img{
+    width: 150px;
+}
+.right-item-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.language button {
+    width: 120px;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    gap: 10px;
+    border: 1px solid #969494;
+    border-radius: 100px;
+    display: inline-block;
+    background-color: rgb(44, 42, 42);
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;    
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.language ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: none;
+    z-index: -1;
+}
+.language ul li a{
+    font-size: larger;
+    text-decoration: none;
+    color: whitesmoke;
+    display:block;
+    padding: 10px;
+}
+.language:hover ul{
+    display: block;
+}
+.language button .material-symbols-outlined{
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+.right-item-container .signin{
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 80px;
+    display: inline-block;
+    background-color: #f5f5f5;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;    
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.list-webp{
+    color: #969494;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 1px solid #969494;
+    background-color: rgb(27, 27, 27);
+    border-radius: 80px;
+    padding: 10px;
+    width: 25%;
+    margin: 5px auto; 
+}
+
+.background-image img{
+    position: relative;
+    left: 5%;
+    width: 90%;
+    opacity: 0.9;
+
+}
