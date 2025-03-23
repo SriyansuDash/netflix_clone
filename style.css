@@ -1,26 +1,82 @@
-body{
-    background-color: rgb(44, 42, 42);
+body {
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
 }
-header{
-    position: sticky;
-    top: 20px;
+
+.web-image {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    opacity: 0.3;
 }
-nav{
+
+.web-image img {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    ;
+    top: 100px;
+    left: 10px;
+    z-index: -1;
+    opacity: 0.3;
+
+}
+
+.big-container {
+    position: relative;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+header {
+    position: fixed;
+    top: 10px;
+    z-index: 10;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    gap: 50rem;
     margin: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 0 4px;
 }
-.image img{
+
+.image img {
     width: 150px;
 }
-.right-item-container{
+
+.right-item-container {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .language button {
     width: 120px;
     padding: 5px;
@@ -32,12 +88,13 @@ nav{
     display: inline-block;
     background-color: rgb(44, 42, 42);
     color: white;
-    font-family:Arial, Helvetica, sans-serif;
-    cursor: pointer;    
-    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 .language ul {
     list-style: none;
     padding: 0;
@@ -46,21 +103,25 @@ nav{
     display: none;
     z-index: -1;
 }
-.language ul li a{
+
+.language ul li a {
     font-size: larger;
     text-decoration: none;
     color: whitesmoke;
-    display:block;
+    display: block;
     padding: 10px;
 }
-.language:hover ul{
+
+.language:hover ul {
     display: block;
 }
-.language button .material-symbols-outlined{
+
+.language button .material-symbols-outlined {
     font-size: 1.5em;
     vertical-align: middle;
 }
-.right-item-container .signin{
+
+.right-item-container .signin {
     width: 100%;
     padding: 10px;
     gap: 10px;
@@ -70,34 +131,408 @@ nav{
     background-color: #f5f5f5;
     font-size: 15px;
     font-weight: bolder;
-    font-family:Arial, Helvetica, sans-serif;
-    cursor: pointer;    
-    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.list-webp{
+
+.right-item-container .signin:hover {
+    background-color: #E50914;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    border: 0 solid transparent;
+    padding: 11px;
+}
+
+.list-webp {
     color: #969494;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     margin-top: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
-    border: 1px solid #969494;
-    background-color: rgb(27, 27, 27);
+    border: 0 solid #969494;
+    background-color: rgb(17, 17, 17);
     border-radius: 80px;
-    padding: 10px;
+    padding: 15px;
     width: 25%;
-    margin: 5px auto; 
+    margin: 5px auto;
+
 }
 
-.background-image img{
-    position: relative;
-    left: 5%;
-    width: 90%;
-    opacity: 0.9;
+.list-webp li {
+    padding: 2px;
+}
 
+.list-webp li:hover {
+    color: #E50914;
+    transform: scale(1.3);
+    transition: transform 0.3s ease;
+}
+
+.background-image img {
+    position: absolute;
+    top: 180px;
+    left: 160px;
+    width: 1600px;
+    height: 70vh;
+    object-fit: fill;
+    border: 0.3px solid #cfcfcf;
+    border-radius: 20px;
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: -1;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transform: translateZ(60%);
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.background-image img ::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.midcontent .first-line {
+    font-weight: 900;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    line-height: 1.2;
+
+}
+
+.midcontent .second-line {
+    font-weight: 600;
+    position: relative;
+    top: -30px;
+}
+
+.midcontent .third-line {
+    font-size: 20px;
+    position: relative;
+    top: -40px;
+}
+
+.midcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+    width: 700px;
+    margin: 0 auto;
+    position: relative;
+    top: 350px;
+    transition: text 1s ease;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.3s ease-in;
+    /* transform: translateY(3ch); */
+
+}
+
+.email {
+    display: inline-block;
+    width: 40pc;
+    border-radius: 50px;
+    position: relative;
+    top: -30px;
+}
+
+.email form input {
+    border: 1px solid #fcfcfc;
+    padding: 20px;
+    color: #fcfcfc;
+    font-size: 15px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    width: 60%;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(66, 65, 65, 0.808);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.email form input::placeholder {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.email form input:hover {
+    border-color: #E50914;
+}
+
+.email button {
+    background-color: #333;
+    border: 1px solid #333;
+    width: 200px;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.email button:hover {
+    background-color: #E50914;
+
+}
+
+.email form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.trendings {
+    position: relative;
+    width: 1600px;
+    gap: 60px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f5f5f5;
+    position: absolute;
+    top: 90vh;
+    left: 4.5cm;
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+.trendings .trending-text {
+    font-size: 35px;
+    font-weight: bolder;
+    transition: all 0.5s ease-in-out;
+}
+
+.trendings .cards {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    gap: 50px;
+    position: relative;
+    left: 40px;
+
+}
+
+.trendings .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: 1fr;
+    justify-items: center;
+    padding: 10px;
+    width: 250px;
+    height: 400px;
+    border: 1px solid #333;
+    background-color: #333;
+    border-radius: 10%;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.trendings .cards .numbers {
+    font-size: 25px;
+    display: block;
+    color: #fff;
+    text-shadow: 10px 10px 20px rgb(0, 0, 0);
+    position: relative;
+    font-size: 150px;
+    bottom: 20%;
+    animation-name: number-animation;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes number-animation {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(-140px);
+    }
+}
+
+.trendings .card1 {
+    display: block;
+    background: url(https://occ-0-4995-2164.1.nflxso.net/dnm/api/v6/-klpX4b1RECP-oGX3Uvz90PrgHE/AAAABWY2l29_Q4fcWvurVVPaQskEeybW5H-pz0CEcX59H0yDREVUcHOPdlpKjhb-AXYmIFt8ae6097xK17E5IGOUfagQ-SJzJTwRc_lNWC_j0pRPan0IziFLF6c2APQ_i2xlNlvvar-fiNgYE0jhcgFW.webp?r=82c);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.trendings .card2 {
+    display: block;
+    background: url(https://occ-0-4995-2164.1.nflxso.net/dnm/api/v6/-klpX4b1RECP-oGX3Uvz90PrgHE/AAAABVjrLRhUd4sxt54Fc2JheAUH6H8LLaABtXs7BMTiUAY0XMjlDQ52iV2G2iP7P8d3kPeEPTqI_zAXmXfjFc3u-uD2z1uT6_lqu9o7LAT-F_A1UypkdlQ02cmcoML68nMCwZkETzaOMuM6js-5wL6q.webp?r=942);
+    background-position: center;
+    background-size: cover;
+    font-size: 150px;
+}
+
+.trendings .card3 {
+    display: block;
+    background: url(https://occ-0-4995-2164.1.nflxso.net/dnm/api/v6/-klpX4b1RECP-oGX3Uvz90PrgHE/AAAABVbt3iTO02SKgalhjz1TKcUFfwgBoiSyMi4OrGZs5r7eJAa7bt0bIdlJ9RavE5-mhwKQeMVC9RtkfJ3bPN8JuUfkhnlnA2vvt-1PGfOeKwQwDy8GmRq4u6ZnyhNc74M1OwRIufnJPsYNH5bx2ZD_.webp?r=521);
+    background-position: center;
+    background-size: cover;
+    font-size: 150px;
+}
+
+.trendings .card4 {
+    display: block;
+    background: url(https://occ-0-4995-2164.1.nflxso.net/dnm/api/v6/-klpX4b1RECP-oGX3Uvz90PrgHE/AAAABRle22NBlr0-IcROZhzASPWgK_S2e-WAG5jx-Jcp_kzDmdK39dWulrS9eo2KBNYGmVxmKCh2voDOVZo3W9C2d5byh5ezBwfQpE33HkvxiAsQfalj2h-UONU46-SthdlEAlQ3rhcEYmynsJe8Kaca9O3TQQkwOm4_1U5VlDPpW-dc94mMpWUoe2pFsNTYuMjVU9C9Ku8sH35WlaC5.webp?r=127);
+    background-position: center;
+    background-size: cover;
+    font-size: 150px;
+}
+
+.trendings .card5 {
+    display: block;
+    background: url(https://occ-0-4995-2164.1.nflxso.net/dnm/api/v6/-klpX4b1RECP-oGX3Uvz90PrgHE/AAAABTNYgUpzLVlth7tn5W_mcgt9ndofJICNYx-AjX8AON_2VcaTwaM5ekc6Z8LhR8p-bRKXEfoAYBnvY9SDi-0WoNYS886hvBk6t2nT6Ops-B8X26OrlXicenyZQkFLFbThkqRodh56gnXDBS75c5s0.webp?r=8b9);
+    background-position: center;
+    background-size: cover;
+    font-size: 150px;
+}
+
+.second-container .plans {
+    margin-top: 150vh;
+}
+
+.second-container .plans .plan-text-info {
+    position: absolute;
+    color: #fcfcfc;
+    font-size: 20px;
+    top: 155vh;
+    left: 4.5cm;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    transition: all 0.5s ease-in-out;
+
+}
+
+/* .second-container .plans .plan-text-info:hover{
+    color: #E50914;
+    transition: all 0.5s ease-in-out;
+} */
+
+.plans-container {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    position: relative;
+    left: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.plans-container .plans-card {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    bottom: 250px;
+    border-radius: 10px;
+    border:0px solid #ccc;
+    background: rgb(2,0,36);
+    background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgb(18, 104, 133) 75%, rgb(12, 128, 151) 100%);
+}
+
+.plans-container .plans-card .type {
+    color: #969494;
+    font-size: 30px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.plans-container .plans-card .quality {
+    color: #969494;
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.plans-container .plans-card ul li {
+    color: #969494;
+    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    top: 140px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+.plans-container .plans-card .price{
+    color: #969494;
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 220px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.foot{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    text-decoration: none;   
+}
+.foot ul li a{
+    text-decoration: none;
+    color: #969494;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 20px;
+}
+.col{
+    color: rgb(150, 148, 148);
+}
+.contact{
+
+    color:rgb(150, 148, 148);
 }

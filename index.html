@@ -4,45 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Netflix-Clone</title>
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico"
+        type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_drop_down" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_drop_down" />
 
 </head>
 
 <body>
-    <header>
-        <nav>
+    <div class="web-image">
 
-            <div class="image">
-                <img src="https://images.ctfassets.net/y2ske730sjqp/821Wg4N9hJD8vs5FBcCGg/9eaf66123397cc61be14e40174123c40/Vector__3_.svg?w=460"
-                    alt="netflix_image">
-            </div>
-            <div class="right-item-container">
-                <div class="language">
-                    <button class="language">English <span class="material-symbols-outlined">arrow_drop_down</span></button>
-                    <ul>
-                        <li><a href="#">Spanish</a></li>
-                        <li><a href="#">French</a></li>
-                        <li><a href="#">German</a></li>
-                    </ul>
+        <img src="https://images.ctfassets.net/y2ske730sjqp/821Wg4N9hJD8vs5FBcCGg/9eaf66123397cc61be14e40174123c40/Vector__3_.svg?w=460"
+            alt="" width="1900vw">
+    </div>
+    <div class="big-container">
+        <header>
+            <nav>
+                <div class="image">
+                    <img src="https://images.ctfassets.net/y2ske730sjqp/821Wg4N9hJD8vs5FBcCGg/9eaf66123397cc61be14e40174123c40/Vector__3_.svg?w=460"
+                        alt="netflix_image">
                 </div>
-                <button class="signin">Sign In</button>
+                <div class="right-item-container">
+                    <div class="language">
+                        <button class="language">English <span
+                                class="material-symbols-outlined">arrow_drop_down</span></button>
+                        <ul>
+                            <li><a href="#">Spanish</a></li>
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">German</a></li>
+                        </ul>
+                    </div>
+                    <button class="signin">Sign In</button>
+                </div>
+            </nav>
+
+            <!-- <ul class="list-webp">
+                <li>Popular Now</li>
+                <li>Plans</li>
+                <li>Reason to join</li>
+                <li>FAQ</li>
+            </ul> -->
+        </header>
+        <main>
+            <div class="background-image">
+                <img src="https://assets.nflxext.com/ffe/siteui/vlv3/f6e7f6df-6973-46ef-b98f-12560d2b3c69/web/IN-en-20250317-TRIFECTA-perspective_26f87873-6014-460d-a6fb-1d96d85ffe5f_large.jpg"
+                    alt="background-image">
             </div>
-        </nav>
-        
-        <ul class="list-webp">
-            <li>Popular Now</li>
-            <li>Plans</li>
-            <li>Reason to join</li>
-            <li>FAQ</li>
-        </ul>
-    </header>
-    <main>
-        <div class="background-image">
-            <img src="./assets/images/background.jpg" alt="background-image">
-        </div>
-    </main>
+            <div class="midcontent">
+                <h1 class="first-line">
+                    Unlimited Movies, TV shows and more
+                </h1>
+                <p class="second-line">
+                    Starts at 149.Cancel at any time
+                </p>
+                <p class="third-line">Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="email">
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="Email Address" class="">
+                        <button type="submit">Get Started</button>
+                    </form>
+                </div>
+            </div>
+            <div class="second-container">
+
+                <div class="trendings">
+                    <div class="trending-text">
+                        <p>Trending Now</p>
+                    </div>
+                    <div class="cards">
+                        <div class="card card1">
+                            <p class="numbers">1</p>
+                        </div>
+                        <div class="card card2">
+                            <p class="numbers">2</p>
+                        </div>
+                        <div class="card card3">
+                            <p class="numbers">3</p>
+                        </div>
+                        <div class="card card4">
+                            <p class="numbers">4</p>
+                        </div>
+                        <div class="card card5">
+                            <p class="numbers">5</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="plans">
+                    <div class="plan-text-info">
+                        <p>Choose your plans</p>
+                    </div>
+                    <div class="plans-container">
+                        <div class="plans-card plans-card1">
+                            <h1 class="type">Mobile</h1>
+                            <p class="quality">480p
+
+                                <ul>
+                                    <li>Fair Video Quality</li>
+                                </ul>
+                            </p>
+                            <p class="price">
+                                <span>₹149</span> per month
+                            </p>
+                        </div>
+                        <div class="plans-card plans-card2">
+                            <h1 class="type">Basic</h1>
+                            <p class="quality">720p
+
+                                <ul>
+                                    <li>Good Video Quality</li>
+                                </ul>
+                            </p>
+                            <p class="price">
+                                <span>₹199</span> per month
+                            </p>
+                        </div>
+                        <div class="plans-card plans-card3">
+                            <h1 class="type">Standard</h1>
+                            <p class="quality">1080p
+
+                                <ul>
+                                    <li>Great Video Quality</li>
+                                </ul>
+                            </p>
+                            <p class="price">
+                                <span>₹499</span> per month
+                            </p>
+                        </div>
+                        <div class="plans-card plans-card4">
+                            <h1 class="type">Premium</h1>
+                            <p class="quality">4K+HDR
+
+                                <ul>
+                                    <li>Best Video Quality</li>
+                                </ul>
+                            </p>
+                            <p class="price">
+                                <span>₹649</span> per month
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer >
+            <p class="contact">Questions? Call 000-800-919-1694</p>
+            <div class="foot">
+            <div >
+                <ul type="none">
+                    <li ><a href="#" class="col">FAQ</a></li>
+                    <li><a href="#" class="col">Media Centre</a></li>
+                    <li><a href="#" class="col">Ways to Watch</a></li>
+                    <li><a href="#" class="col">Cookie Preferences</a></li>
+                    <li><a href="#" class="col">Speed Test</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul type="none">
+                    <li><a href="#" class="col">Help Centre</a></li>
+                    <li><a href="#" class="col">Investor Relations</a></li>
+                    <li><a href="#" class="col">Terms of Use</a></li>
+                    <li><a href="#" class="col">Corporate Information</a></li>
+                    <li><a href="#" class="col">Legal Notices</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul type="none">
+                    <li><a href="#" class="col">Account</a></li>
+                    <li><a href="#" class="col">Jobs</a></li>
+                    <li><a href="#"class="col">Privacy</a></li>
+                    <li><a href="#" class="col">Contact Us</a></li>
+                    <li><a href="#" class="col">Only on Netflix</a></li>
+                </ul>
+            </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
